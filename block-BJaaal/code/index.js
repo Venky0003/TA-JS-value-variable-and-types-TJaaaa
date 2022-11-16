@@ -15,6 +15,7 @@ let lastName = "Stark";
   - Alert the message `I'm Arya Stark of Winterfell` using the variable name firstName and lastName.
 */
 alert("I am"+" "+username+" "+"and my bio is"+" "+bio)
+alert(firstName+" "+lastName);
 /* Do the following using string template literal
   - Alert message saying `I am [username] and my bio is [bio]`. Replace square brackets with the value of variable.
   - Alert the message `I'm Arya Stark of Winterfell` using the variable name firstName and lastName.
