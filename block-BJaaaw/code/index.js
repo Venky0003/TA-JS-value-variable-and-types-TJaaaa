@@ -48,7 +48,7 @@ let houseName=prompt("Enter your house name");
 
 // 5. Convert the above code using`?` terniary operator
 // Switch
-
+  houseName==="stark" ? alert("Winter is coming"):houseName === "lannister" ? alert(" A lannister always pays his debt"):alert(" All men must die");
 // 6. Write a program that takes the number of the month(1 - 12) and alert number of days in the month.
    let month= Number(prompt("Enter the month"))
 
@@ -106,7 +106,7 @@ Implement the condition give below using`if..else` and`switch` statement.
   - `marks > 0` alert`"Grade D"`
 
 */
- let marks = 85;
+ let marks = prompt("Enter your marks");
  if(marks > 100 ){
   alert("Marks can't be greater than 100");
  }
