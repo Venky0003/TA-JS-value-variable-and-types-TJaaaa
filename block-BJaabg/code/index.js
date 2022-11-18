@@ -14,35 +14,21 @@ const ACCESSORY_PRICE = 9.99;
 var bank_balance = 303.91;
 var amount = 0;
 // your code goes here
-var totalPurchase = 0;
-var phonesPurchased = 0;
-var accPurchased = 0;
-function productWithTax(total) {
-	return total + (total * TAX_RATE);
+while(amount < bank_balance){
+    amount += PHONE_PRICE;
+    if(amount < SPENDING_THRESHOLD){
+        amount +=ACCESSORY_PRICE;
+    }
 }
-
-function formatUSD(total) {
-	return '$' + total.toFixed(2);
+let tax = amount * TAX_RATE;
+let totalAmount = amount + tax;
+console.log(`$${totalAmount}`)
+if(totalAmount < bank_balance){
+   console.log(`ypu can afford it`)
 }
-while ( (totalPurchase < bank_balance) && 
-(totalPurchase < SPENDING_THRESHOLD) && 
-(totalPurchase + productWithTax(PHONE_PRICE) < SPENDING_THRESHOLD)) {
-	totalPurchase += productWithTax(PHONE_PRICE);
-	phonesPurchased = phonesPurchased + 1;
-	
-	if (totalPurchase + productWithTax(ACCESSORY_PRICE) < SPENDING_THRESHOLD) {
-		totalPurchase += productWithTax(ACCESSORY_PRICE);
-		accPurchased = accPurchased + 1;
-	}
-    totalPurchase++;
-} 
-
-
-bank_balance -= totalPurchase;
-console.log('Phones Purchased: ' + phonesPurchased);
-console.log('Accessories Purchased: ' + accPurchased);
-console.log('Total Purchase Amount: ' + formatUSD(totalPurchase));
-console.log('Ending Bank Balance: ' + formatUSD(bank_balance));
+else{
+    console.log(`you can't afford it`)
+}
 
 
 // ⛑ Answer of the above will `$334.76`.
