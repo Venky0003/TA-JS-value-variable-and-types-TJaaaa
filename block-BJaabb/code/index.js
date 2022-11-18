@@ -74,4 +74,9 @@ Example:
 let num1 = prompt("Enter a number one to compare");
 let num2 = prompt("Enter a number two to compare")
 
-num1 ===num2 ? alert(true):alert(false)
+if(isNaN(num1) || isNaN(num2)){
+  alert(`Enter a valid value`);
+}
+else {
+  alert(num1 === num2);
+}
