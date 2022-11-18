@@ -71,8 +71,8 @@ Example:
 "hello", -21; // false
 
 */
-let num1 = prompt("Enter a number one to compare");
-let num2 = prompt("Enter a number two to compare")
+let num1 = +prompt("Enter a number one to compare");
+let num2 = +prompt("Enter a number two to compare")
 
 if(isNaN(num1) || isNaN(num2)){
   alert(`Enter a valid value`);
